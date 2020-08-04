@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+<style>
+
+span, td {
+
+font-size:20pt;
+}
+
+
+</style>
+</head>
+<body>
+<h3>运动有益健康</h3>
+
+<span id=message2>
+
+
+
+<P>
+<b>说一说你经常会做什么运动。为什么你喜欢这个/这些运动？</b>
+<P>
+我经常跑步和骑脚踏车。每个星期天早上，我们全家人都会早起，然后一起到附近的公园骑脚踏车和跑步。
+我喜欢这些运动，因为通过这些运动，我可以锻炼身体，增强免疫力。自从开始运动后，我的身体变得更加健康不再这么容易生病了。我们应该重视运动。运动有益健康而健康就是财富，得到了健康就等于拥有了财富。我和家人一起运动时，我们也总是有说有笑的，非常开心。我非常珍惜这样的快乐时光。这不仅可以让我放松心情，还可以增进我和家人之间的感情。
+
+</P>
+</span>
+<span id=message2>
+<b>你会怎样鼓励朋友多做运动？</b>
+<P>
+ 
+我会时常提醒朋友多做运动，告诉他们多做运动的好处。做运动可以强身健体，增强免疫力，使我们不容易生病，还可以让我们放松紧张不安的心情，减轻压力。
+尤其小六会考即将来临，我们在学习的同时，也不能忽略自己的身心健康，要多做运动。
+我也会鼓励朋友陪我一起做运动，比如说:打羽毛球、打篮球和骑脚踏车。通过这些运动，我们将会一起度过快乐的时光。
+再来，在做运动的时候，我和朋友也可以进行一些小比赛，比如说:赛跑，来引起朋友对运动的兴趣。
+
+</P>
+</span>
+
+		
+		
+	
+	<button id=text2 onclick="listen()" >Listen</button>
+	
+	
+    
+
+</div>
+</body>
+</html>
+<script>
+
+	
+function listen() {
+ 
+ var msg1 = document.getElementById("message0").innerText;
+  var msg = new SpeechSynthesisUtterance(msg1);
+  var voices = window.speechSynthesis.getVoices();
+  msg.voice = voices[17];
+  var platform = navigator.platform ;
+	if ( platform == "Win32") {
+	 msg.voice = voices[0];
+	}
+  	
+  window.speechSynthesis.speak(msg);
+
+}
+
+
+</script>
